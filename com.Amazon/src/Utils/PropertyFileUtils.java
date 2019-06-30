@@ -11,7 +11,7 @@ public class PropertyFileUtils {
 	public static String getValueForKey(String key) throws FileNotFoundException, IOException
 	{
 		Properties confgProperty=new Properties();
-		confgProperty.load(new FileInputStream(new File("C:\\Users\\Hi\\Desktop\\Practice\\SeleniumLive\\com.Amazon\\PropertyFile\\Environment.properties")));
+		confgProperty.load(new FileInputStream(new File("./PropertyFile/Environment.properties")));
 		return confgProperty.getProperty(key);
 	}
 }

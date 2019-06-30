@@ -17,7 +17,7 @@ public class ExcelFileUtils {
 	
 	public ExcelFileUtils() throws Throwable
 	{
-	FileInputStream fis=new FileInputStream("C:/Users/Hi/Desktop/Practice/SeleniumLive/com.Amazon/TestInput/InputSheet.xlsx");
+	FileInputStream fis=new FileInputStream("./TestInput/InputSheet.xlsx");
 	wb=WorkbookFactory.create(fis);
 	}
 	
@@ -70,7 +70,7 @@ public class ExcelFileUtils {
 			style.setFont(font);
 			wb.getSheet(Sheet).getRow(Row).getCell(col).setCellStyle(style);
 		}
-		FileOutputStream fos=new FileOutputStream("C:/Users/Hi/Desktop/Practice/SeleniumLive/com.Amazon/TestOutput/OutputSheet.xlsx");
+		FileOutputStream fos=new FileOutputStream("./TestOutput/OutputSheet.xlsx");
 		wb.write(fos);
 		//wb.close();
 		fos.close();
